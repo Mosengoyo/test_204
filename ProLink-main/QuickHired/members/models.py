@@ -17,10 +17,7 @@ class Product(models.Model):
 	def __str__(self):
 		return f"{self.name} {self.description}"
 
-
-
-
-class Cart(models.Model):
+class Panier(models.Model):
 	user = models.TextField()
 	product = models.TextField() # models.ForeignKey(Product, on_delete=models.CASCADE)
 	quantity = models.IntegerField()

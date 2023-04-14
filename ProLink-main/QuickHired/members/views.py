@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
+from .models import Panier
+from .models import Product
 
 def members(request):
 	mymembers = Member.objects.all().values()
@@ -25,12 +27,17 @@ def main(request):
 	return HttpResponse(template.render())
 
 def panier(request):
-	context = {}
-	return render(request, 'PagePanier/Panier.html', context)
+	#myproduct = Product.objects.get(id=id)
+	template = loader.get_template('PagePanier/Panier.html')
+	#context = {
+#		'myproduct' : myproduct,#
+#	}
+	return HttpResponse(template.render()) # context, request
 
 def checkout(request):
+	template = loader.get_template('PageCheckout/Checkout.html')
 	context = {}
-	return render(request, 'main/Checkout.html')
+	return HttpResponse(template.render())
 
 def testing(request):
 	template = loader.get_template('template.html')

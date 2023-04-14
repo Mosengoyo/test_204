@@ -1,6 +1,9 @@
-{% extends 'PageAccueil/PageAc.html' %}
+
 {% load static %}
 {% block content %}
+<!DOCTYPE html>
+<html>
+
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="box-element">
@@ -38,9 +41,9 @@
 					<div style="flex:1">
 						<p class="quantity">2</p>
 						<div class="quantity">
-							<img class="chg-quantity" src="{% static  'PagePanier/arrow-up.png' %}">
+							<img class="chg-quantity" src="{% static  'images/arrow-up.png' %}">
 					
-							<img class="chg-quantity" src="{% static  'PagePanier/arrow-down.png' %}">
+							<img class="chg-quantity" src="{% static  'images/arrow-down.png' %}">
 						</div>
 					</div>
 					<div style="flex:1"><p>$32</p></div>
@@ -50,3 +53,4 @@
 		</div>
 	</div>
 {% endblock content %}
+</html>

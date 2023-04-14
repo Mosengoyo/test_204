@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Member
-from .models import Product, Cart
+from .models import Product, Panier
 
 # Register your models here.
 class MemberAdmin(admin.ModelAdmin):
@@ -17,9 +17,9 @@ admin.site.register(Product, ProductAdmin)
 
 
 # Register your models here.
-class CartAdmin(admin.ModelAdmin):
+class PanierAdmin(admin.ModelAdmin):
     list_display = ("user", "product", "quantity","total_price",)
 
-admin.site.register(Cart, CartAdmin)
+admin.site.register(Panier, PanierAdmin)
 
 
