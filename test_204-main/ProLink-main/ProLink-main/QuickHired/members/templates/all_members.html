@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    {% extends "master.html" %}
+
+    {% block title %}
+      QuickHired - List of all members
+    {% endblock %}
+    
+    
+    {% block content %}
+    
+      <p><a href="/">HOME</a></p>
+    
+      <h1>Members</h1>
+      
+      <ul>
+        {% for x in mymembers %}
+          <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }} {{ x.phone }} {{ x.joined_date }} {{ x.note }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endblock %}
+    
+
+</body>
+</html>

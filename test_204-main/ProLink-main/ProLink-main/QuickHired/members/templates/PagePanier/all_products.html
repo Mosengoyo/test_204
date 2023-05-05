@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    {% extends "master.html" %}
+
+    {% block title %}
+      QuickHired - List of all products
+    {% endblock %}
+    
+    
+    {% block content %}
+    
+      <p><a href="/">HOME</a></p>
+    
+      <h1>Products</h1>
+      
+      <ul>
+        {% for x in myproduct %}
+          <li><a href="details/{{ x.id }}">{{ x.image }} {{ x.name }} {{ x.description }} {{ x.price }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endblock %}
